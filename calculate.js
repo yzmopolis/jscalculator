@@ -27,9 +27,21 @@ function calculate() {
                 equation += buttonValue;
                 view += buttonValue;
             }
-            prevNumber = number;
-            prevOperator = buttonValue;
-            number = "";
+            display();
+            break;
+        case "x":
+            if (operators.indexOf(equation.slice(-1)) == -1) {
+                equation += "*";
+                view += buttonValue;
+            }
+            display();
+            break;
+        case "÷":
+            if (operators.indexOf(equation.slice(-1)) == -1) {
+                equation += "/";
+                view += buttonValue;
+            }
+            display();
             break;
 
         case "=":
@@ -58,5 +70,11 @@ function calculate() {
 
                 }
     document.getElementById("view").innerHTML = view;
+}
+
+function display() {
+    prevNumber = number;
+    prevOperator = buttonValue;
+    number = "";
 }
 
