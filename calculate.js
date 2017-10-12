@@ -21,6 +21,18 @@ function calculate() {
             prevOperator = "";
             alert(buttonValue);
             break;
-    }
+        case ".":
+            alert(buttonValue);
+            if (number == 0) {
+                break;
+            }
+            if (number.indexOf(".") == -1) {
+            }
+            break;
+        case "+":
+        case "-":
+            alert(buttonValue);
+
+                }
 }
 
