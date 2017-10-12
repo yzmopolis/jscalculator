@@ -19,20 +19,44 @@ function calculate() {
             view = "";
             prevNumber = "";
             prevOperator = "";
-            alert(buttonValue);
             break;
-        case ".":
-            alert(buttonValue);
-            if (number == 0) {
-                break;
-            }
-            if (number.indexOf(".") == -1) {
-            }
-            break;
+
         case "+":
         case "-":
-            alert(buttonValue);
+            if (operators.indexOf(equation.slice(-1)) == -1) {
+                equation += buttonValue;
+                view += buttonValue;
+            }
+            prevNumber = number;
+            prevOperator = buttonValue;
+            number = "";
+            break;
+
+        case "=":
+            if (operators.indexOf(equation.slice(-1)) !== -1) {
+                equation = view.slice(0, -1)
+            }
+            try {
+                var result = eval(equation).toString();
+                number = result;
+                equation = result;
+                view = parseFloat(Number(result).toFixed(10));
+            }
+            catch (SyntaxError) {
+                alert("error!")
+            }
+            finally {
+                break;
+            }
+        default:
+            equation += buttonValue;
+            number += buttonValue;
+            view += buttonValue;
+            break;
+
+
 
                 }
+    document.getElementById("view").innerHTML = view;
 }
 
