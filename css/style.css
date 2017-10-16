@@ -1,1 +1,106 @@
-/* YOUR CUSTOM STYLES */
+main {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.widget-wrapper {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+.reviews {
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.price {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -2px;
+}
+
+.price .tag {
+    margin: 0;
+}
+
+.navbar {
+    background-color: #676b74;
+}
+
+footer.page-footer {
+    background-color: #676b74;
+    margin-top: 2rem;
+}
+.card {
+    font-weight: 300;
+}
+.navbar .btn-group .dropdown-menu a:hover {
+    color: #000 !important;
+}
+.navbar .btn-group .dropdown-menu a:active {
+    color: #fff !important;
+}
+
+#calculator {
+    width: 260px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 100px;
+    padding-bottom: 10px;
+    background-color: #212121;
+    border-radius: 10px;
+    border: none;
+}
+
+#view {
+    background-color: #e0e0e0;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 5px;
+    height: 35px;
+    width: 240px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.row {
+    font-size: 0;
+    background-color: #212121;
+    margin: 0px 3px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+    margin: 3px;
+    background-color: #616161;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.result {
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #616161;
+    float:right;
+}
+
+
