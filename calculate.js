@@ -22,13 +22,13 @@ function calculate() {
             break;
         case ".":
             if (number.length == 0) {
-                numberumber += "0.";
+                number += "0.";
                 equation += "0.";
                 view += "0.";
                 break;
             }
-            if (numberumber.indexOf(".") == -1) {
-                numberumber += btnValue;
+            if (number.indexOf(".") == -1) {
+                number += btnValue;
                 equation += btnValue;
                 view += btnValue;
             }
