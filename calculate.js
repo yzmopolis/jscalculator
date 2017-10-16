@@ -20,6 +20,19 @@ function calculate() {
             prevNumber = "";
             prevOperator = "";
             break;
+        case ".":
+            if (number.length == 0) {
+                numberumber += "0.";
+                equation += "0.";
+                view += "0.";
+                break;
+            }
+            if (numberumber.indexOf(".") == -1) {
+                numberumber += btnValue;
+                equation += btnValue;
+                view += btnValue;
+            }
+            break;
 
         case "+":
         case "-":
@@ -60,6 +73,24 @@ function calculate() {
             finally {
                 break;
             }
+        case "%":
+            if (operators.indexOf(equation.slice(-1)) == -1) {
+                switch (prevOperator) {
+                    case "+":
+                        equation += "-" + number + "+(" + prevNumber + "/100*" + number + ")";
+                        break;
+                    case "-":
+                        equation += "+" + number + "-(" + prevNumber + "/100*" + number + ")";
+                        break;
+                    default:
+                        equation += "*0.01*"
+                        break;
+                }
+                view += buttonValue;
+            }
+            number = "";
+            break;
+
         default:
             equation += buttonValue;
             number += buttonValue;

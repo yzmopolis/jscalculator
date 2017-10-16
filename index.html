@@ -1,46 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Simple vanilla js calculator</title>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        .widget-wrapper {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
+        .reviews {
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .price {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: -2px;
+        }
+
+        .price .tag {
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #676b74;
+        }
+
+        footer.page-footer {
+            background-color: #676b74;
+            margin-top: 2rem;
+        }
+        .card {
+            font-weight: 300;
+        }
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+    </style>
+
 </head>
+
 <body>
 
-<section id="calculator">
-    <div>
-        <p id="view"></p>
+
+<header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Calculator vanilla js</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+</header>
+<main>
+    <section id="calculator">
+        <div>
+            <p id="view"></p>
+        </div>
+        <div class="row" >
+            <button class="operator" type="button">÷</button>
+            <button class="operator" type="button">x</button>
+            <button class="operator" type="button">-</button>
+            <button class="operator" type="button">+</button>
+        </div>
+        <div class="row" >
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button class="operator" type="button">%</button>
+        </div>
+        <div class="row" >
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button class="reset" type="button">C</button>
+        </div>
+        <div class="row" >
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button class="result" type="button">=</button>
+        </div>
+        <div class="row" >
+            <button class="zero" type="button">0</button>
+            <button class="decimals" type="button">.</button>
+        </div>
+    </section>
+
+</main>
+
+
+<!--Footer-->
+<footer class="page-footer center-on-small-only">
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 vanilla js </a>
+
+        </div>
     </div>
-    <div class="row" >
-        <button class="operator" type="button">÷</button>
-        <button class="operator" type="button">x</button>
-        <button class="operator" type="button">-</button>
-        <button class="operator" type="button">+</button>
-    </div>
-    <div class="row" >
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button class="operator" type="button">%</button>
-    </div>
-    <div class="row" >
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button class="reset" type="button">C</button>
-    </div>
-    <div class="row" >
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button class="result" type="button">=</button>
-    </div>
-    <div class="row" >
-        <button class="zero" type="button">0</button>
-        <button class="decimals" type="button">.</button>
-    </div>
-</section>
-    <script type="text/javascript" src="calculate.js"></script>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+
+<!-- SCRIPTS -->
+
+<!-- Main calculator script -->
+
+<script type="text/javascript" src="calculate.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+<!-- Bootstrap dropdown -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+
 </body>
+
 </html>
