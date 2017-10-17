@@ -28,9 +28,9 @@ function calculate() {
                 break;
             }
             if (number.indexOf(".") == -1) {
-                number += btnValue;
-                equation += btnValue;
-                view += btnValue;
+                number += buttonValue;
+                equation += buttonValue;
+                view += buttonValue;
             }
             break;
 
