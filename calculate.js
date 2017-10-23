@@ -21,58 +21,48 @@ function calculate() {
             prevOperator = "";
             break;
         case ".":
+
+            if (number.indexOf(".") == -1) {
+                number += buttonValue;
+                equation += buttonValue;
+                view += buttonValue;
+            }
+
             if (number.length == 0) {
                 number += "0.";
                 equation += "0.";
                 view += "0.";
                 break;
             }
-            if (number.indexOf(".") == -1) {
-                number += buttonValue;
-                equation += buttonValue;
-                view += buttonValue;
-            }
             break;
-
         case "+":
         case "-":
             if (operators.indexOf(equation.slice(-1)) == -1) {
                 equation += buttonValue;
                 view += buttonValue;
             }
-            display();
+            prevNumber = number;
+            prevOperator = buttonValue;
+            number = "";
             break;
         case "x":
             if (operators.indexOf(equation.slice(-1)) == -1) {
                 equation += "*";
                 view += buttonValue;
             }
-            display();
+            prevNumber = number;
+            prevOperator = buttonValue;
+            number = "";
             break;
         case "÷":
             if (operators.indexOf(equation.slice(-1)) == -1) {
                 equation += "/";
                 view += buttonValue;
             }
-            display();
+            prevNumber = number;
+            prevOperator = buttonValue;
+            number = "";
             break;
-
-        case "=":
-            if (operators.indexOf(equation.slice(-1)) !== -1) {
-                equation = view.slice(0, -1)
-            }
-            try {
-                var result = eval(equation).toString();
-                number = result;
-                equation = result;
-                view = parseFloat(Number(result).toFixed(10));
-            }
-            catch (SyntaxError) {
-                alert("error!")
-            }
-            finally {
-                break;
-            }
         case "%":
             if (operators.indexOf(equation.slice(-1)) == -1) {
                 switch (prevOperator) {
@@ -90,22 +80,28 @@ function calculate() {
             }
             number = "";
             break;
-
+        case "=":
+            if (operators.indexOf(equation.slice(-1)) !== -1) {
+                equation = view.slice(0, -1)
+            }
+            try {
+                var result = eval(equation).toString();
+                number = result;
+                equation = result;
+                view = parseFloat(Number(result).toFixed(10));
+            }
+            catch (SyntaxError) {
+                alert("The syntax of the equation is not correct!")
+            }
+            finally {
+                break;
+            }
         default:
             equation += buttonValue;
             number += buttonValue;
             view += buttonValue;
             break;
-
-
-
-                }
+    }
     document.getElementById("view").innerHTML = view;
-}
-
-function display() {
-    prevNumber = number;
-    prevOperator = buttonValue;
-    number = "";
 }
 
